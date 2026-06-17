@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <div class="face face1">
+<title>For Menna 💖</title>
+
+
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>💖 For Menna 💖</h1>
+
+<p>
+You are my happiness, my safe place, and my favorite human 😂❤️
+</p>
+
+<!-- SLIDER -->
+
+<div class="slider">
+    <img src="./38172.jpg" width="300" class="slide active">
+    <img src="./38487.jpg" class="slide">
+    <img src="./2.jpg" class="slide">
+    <img src="./3.jpg" class="slide">
+    <img src="./4.jpg" class="slide">
+    <img src="./5.jpg" class="slide">
+    <img src="./1.jpg" class="slide">
+    <img src="./6.jpg" class="slide">
+    <img src="./37631.jpg" class="slide">
+    <img src="./38488.jpg" class="slide">
+    <img src="./36705.jpg" class="slide">
+</div>
+
+<button onclick="showMessage()">Click Me 💌</button>
+
+<div id="msg"></div>
+
+<button onclick="showSurprise()">Final Surprise 🎁</button>
+
+<div class="surprise" id="surprise">
+في نوع من الصحاب مش محتاج تبرر له غيابك، هو عارف غلاوته عندك وأنت عارف غلاوتك عنده.
+
+حتي لو اتأخرنا ف الكلام، عمر ما حاجه اتغيرت بينا. 
+
+شكراً إنك دايما بتخلي الدنيا أخف!🫂💖  
+
+</div>
+
+</div>
+
+<script>
+
+// messages
+let messages=[
+"Some people come and go… you came and changed my life.",
+"رَفِيقُ دَربٍ هَيّن الطِّباع، ليّن الحَديث 💖",
+
+"أتباهى بصداقتها، مثلما يتباهى المرء بانتصاره الوحيد أمام كل خساراته.",
+
+"يا نعمة حياتي الحلوة، ويا رضا قلبي 🤍",
+
+"وأنتِ يا بهجة الدنيا وزينتها 🌸",
+
+"كالزهر، كالعطر، من يلقاكِ يهواكِ 💕",
+
+"رَفِيقُ دَربٍ هَيّن الطِّباع، ليّن الحَديث 💖",
+"بحبك يا منوووووونة 💖",
+"إنتي أحن قلب 😂❤️",
+"وجودك نعمة في حياتي 🌸",
+"إنتي مش صاحبة… إنتي أختي 💕",
+"ضحكتك أجمل حاجة 💖"
+];
+
+let i=0;
+
+function showMessage(){
+document.getElementById("msg").innerText = messages[i];
+i=(i+1)%messages.length;
+}
+
+// SURPRISE
+function showSurprise(){
+document.getElementById("surprise").style.display="block";
+}
+
+// SLIDER
+let index = 0;
+let slides = document.querySelectorAll(".slide");
+
+setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 2000);
+
+// hearts
+for(let j=0;j<20;j++){
+let h=document.createElement("div");
+h.innerHTML="💖";
+h.classList.add("heart");
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(3+Math.random()*5)+"s";
+document.body.appendChild(h);
+}
+
+</script>
+
+</body>
+</html>

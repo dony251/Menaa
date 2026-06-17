@@ -1,0 +1,106 @@
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background: linear-gradient(135deg,#ffafbd,#ffc3a0);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    flex-direction:column;
+    text-align:center;
+    overflow:hidden;
+}
+
+/* Card */
+.card{
+    background:#fff;
+    padding:25px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    width:90%;
+    max-width:420px;
+}
+
+/* Title */
+h1{
+    color:#ff4d6d;
+}
+
+/* Paragraph */
+p{
+    color:#444;
+    font-size:15px;
+}
+
+/* Button */
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:#ff4d6d;
+    color:#fff;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* Message */
+#msg{
+    margin-top:15px;
+    font-size:16px;
+    color:#ff4d6d;
+    font-weight:bold;
+    min-height:40px;
+}
+
+/* SLIDER (FIXED) */
+.slider{
+    width:100%;
+    height:250px;   /* ثابت وواضح */
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+    margin-top:15px;
+    background:#eee;
+}
+
+/* كل الصور فوق بعض */
+.slide{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit: contain;
+    background: #fff;
+    opacity:0;
+    transition:0.8s ease;
+}
+
+/* الصورة اللي شغالة */
+.slide.active{
+    opacity:1;
+}
+/* HEARTS */
+.heart{
+    position:absolute;
+    color:#ff4d6d;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(100vh);}
+    100%{transform:translateY(-10vh);}
+}
+
+/* SURPRISE */
+.surprise{
+    display:none;
+    margin-top:15px;
+    font-size:16px;
+    color:#ff4d6d;
+    font-weight:bold;
+}
